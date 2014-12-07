@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Hackette",
+    "description": "An extension that journals your browser history for indexing and sharing with friends for emergent behavior.",
+    "version": "1.0",
+
+    "permissions": [
+	"tabs",
+	"webRequest",
+	"<all_urls>"
+    ],
+    "background": {
+	"scripts": ["lib/background.js"]
+    },
+    "content_scripts": [
+	{
+	    "matches": ["<all_urls>"],
+	    "js": ["lib/hackette.js"],
+	    "run_at": "document_start",
+	    "all_frames": true
+	}
+    ]
+
+}

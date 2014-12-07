@@ -10,12 +10,12 @@
 	"<all_urls>"
     ],
     "background": {
-	"scripts": ["lib/background.js"]
+	"scripts": ["build/javascripts/hackette.js"]
     },
     "content_scripts": [
 	{
 	    "matches": ["<all_urls>"],
-	    "js": ["lib/hackette.js"],
+	    "js": ["build/javascripts/content-script.js"],
 	    "run_at": "document_start",
 	    "all_frames": true
 	}
